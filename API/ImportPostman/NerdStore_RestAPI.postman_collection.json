@@ -1,0 +1,177 @@
+{
+    "info": {
+        "_postman_id": "36a1a236-8041-4050-960c-d7443ba94a29",
+        "name": "JudMed_RestAPI",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Pesquisar Todos os Processos",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": []
+                },
+                "url": "http://localhost:8080/api/BuscarTodosProcessos",
+                "description": "Pesquisa todos os processo da Judmed"
+            },
+            "response": []
+        },
+        {
+            "name": "Pesquisar Processo Por Numero",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": []
+                },
+                "url": "http://localhost:8080/api/PesquisarProcessoPorNumero/mpba_p1",
+                "description": "Pesquisa Processo por Número"
+            },
+            "response": []
+        },
+        {
+            "name": "Auditar Processo",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": []
+                },
+                "url": "http://localhost:8080/api/AuditarProcesso/mpba_p4",
+                "description": "Pesquisa Processo por Número"
+            },
+            "response": []
+        },
+        {
+            "name": "Cadastrar Processo",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "",
+                        "value": "",
+                        "disabled": true
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n \"id\":\"mpba_p4\",\n \"numRename\":\"ren04\",\n \"nomeComercialMedicamento\":\"Dipirona 100 Mg - Capsulas\",\n \"instancia\":\"MPBA\",\n \"status\":\"Criado_MP\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/CadastrarProcessoJudicial/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "CadastrarProcessoJudicial",
+                        ""
+                    ],
+                    "query": [
+                        {
+                            "key": "ID",
+                            "value": "mpba_p4",
+                            "disabled": true
+                        },
+                        {
+                            "key": "numRename",
+                            "value": "ren04",
+                            "disabled": true
+                        },
+                        {
+                            "key": "nomeComercialMedicamento",
+                            "value": "Oxford-Aztrazenica 100 Mg",
+                            "disabled": true
+                        },
+                        {
+                            "key": "instancia",
+                            "value": "MPBA",
+                            "disabled": true
+                        },
+                        {
+                            "key": "status",
+                            "value": "Criado_MP",
+                            "disabled": true
+                        }
+                    ]
+                },
+                "description": "Cadastrar Processo"
+            },
+            "response": []
+        },
+        {
+            "name": "Movimentar Processo",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "",
+                        "value": "",
+                        "disabled": true
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n \"id\":\"mpba_p4\",\n \"numRename\":\"ren06\",\n \"nomeComercialMedicamento\":\"Losartana 100 Mg - Capsulas\",\n \"instancia\":\"MPBA\",\n \"status\":\"Criado_SMS\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/MovimentarProcesso/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "MovimentarProcesso",
+                        ""
+                    ],
+                    "query": [
+                        {
+                            "key": "ID",
+                            "value": "mpba_p4",
+                            "disabled": true
+                        },
+                        {
+                            "key": "numRename",
+                            "value": "ren04",
+                            "disabled": true
+                        },
+                        {
+                            "key": "nomeComercialMedicamento",
+                            "value": "Oxford-Aztrazenica 100 Mg",
+                            "disabled": true
+                        },
+                        {
+                            "key": "instancia",
+                            "value": "MPBA",
+                            "disabled": true
+                        },
+                        {
+                            "key": "status",
+                            "value": "Criado_MP",
+                            "disabled": true
+                        }
+                    ]
+                },
+                "description": "Cadastrar Processo"
+            },
+            "response": []
+        }
+    ]
+}
